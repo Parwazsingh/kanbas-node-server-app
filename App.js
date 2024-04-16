@@ -10,7 +10,7 @@ import CourseRoutes from './Kanbas/courses/routes.js';
 import mongoose from "mongoose";
 import UserRoutes from './Kanbas/Users/routes.js';
 
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/kanbas'
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING; 
 mongoose.connect(CONNECTION_STRING);
 
 // mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
