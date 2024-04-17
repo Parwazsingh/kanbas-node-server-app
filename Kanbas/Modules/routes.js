@@ -6,12 +6,15 @@ function ModuleRoutes(app) {
 
   const createModule = async (req, res) => {
     const { cid } = req.params;
+    console.log(req.body)
     const module = await dao.createModule(cid, req.body);
+   
     res.json(module);
   }
 
   const deleteModule = async (req, res) => {
     const status = await dao.deleteModule(req.params.moduleId);
+    console.log(req.params.moduleId, status)
     res.json(status);
   }
 
